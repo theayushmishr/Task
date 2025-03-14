@@ -1,0 +1,280 @@
+:root{
+    /*Colors*/
+    --primary-clr: hsl(0, 0%, 0%);
+    --primary-variant-clr: hsl(0, 0%, 0%);
+    --secondary-clr: hsl(0, 0%, 8%);
+    --secondary-variant-clr: hsl(0, 0%, 0%);
+    --surface: hsl(0, 0%, 5%);
+    --background: hsl(0, 0%, 0%);
+    --error: hsl(0, 100%, 50%);
+    --on-primary-clr: hsl(0, 0%, 100%);
+    --on-secondary-clr: hsl(0, 0%, 100%);
+    --on-surface: hsl(0, 0%, 100%);
+    --on-background: hsl(0, 0%, 100%);
+    --on-error: hsl(0, 0%, 100%);
+
+     
+    --pd-0: 0rem;
+    --pd-0_125: 0.125rem; /* 2px */
+    --pd-0_25: 0.25rem; /* 4px */
+    --pd-0_5: 0.5rem; /* 8px */
+    --pd-0_75: 0.75rem; /* 12px */
+    --pd-1: 1rem; /* 16px */
+    --pd-1_25: 1.25rem; /* 20px */
+    --pd-1_5: 1.5rem; /* 24px */
+    --pd-2: 2rem; /* 32px */
+    --pd-2_5: 2.5rem; /* 40px */
+    --pd-3: 3rem; /* 48px */
+    
+}
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+button,input{
+    font-family: "Space Grotesk", sans-serif;
+}
+
+
+/* Prevent animations on users with reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* Body */
+Body{
+    background: var(--background);
+    color:var(--on-background);
+    font-family: "Space Grotesk",sans-serif;
+}
+
+
+
+
+/* Nav */
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: var(--pd-1_5);
+}
+.nav-logo,.user-profile{
+    fill: var(--on-surface);
+}
+
+.main{
+    /* if want to add something */
+    max-width: 750px;
+    margin: auto;
+}
+
+.container{
+    /* if want to add something */
+    display: grid;
+}
+
+.container .main-title{
+    font-size: 5rem;
+    padding: var(--pd-1_5);
+    font-family: "Space Grotesk", sans-serif;
+}
+.user-input{
+    padding: 1rem;
+    display: flex;
+    border-radius: 1rem;
+}
+.user-input .new-task{
+    width: 100%;
+    padding: 1rem 1.5rem;
+    background: none;
+    color: white;
+    /* border: none; */
+    border-radius: 1rem;
+    background: var(--secondary-clr);
+    border: none;
+    font-size: 1.15rem;
+    font-family: "Space Grotesk", sans-serif;
+}
+.new-task::placeholder{
+    font-size: 1.15rem;
+    font-family: "Space Grotesk", sans-serif;
+}
+.new-task:focus{
+      outline: none;  
+}
+
+.add-btn{
+    background: none;
+    padding: 1rem;
+    border-left: none;
+    border-radius: 1rem;
+    background: greenyellow;
+    border: none;
+}
+.add-btn svg{
+    fill: black;
+}
+.task-list{
+    padding: 1rem 1rem 0 1rem;
+}
+
+.task-list li{
+    display: flex;
+    padding: 1rem;
+    background: var(--secondary-clr);
+    border-radius: 1rem;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    font-weight: 500;
+    max-width: 750px;
+}
+
+ .task-list .item1{
+    background: #fef752;
+    color: black;
+ }
+ .task-list .item2{
+     background:  #ffffff;
+     color: black;
+ }
+ .task-list .item3{
+    background: #bcef4b;
+     color: black;
+ }
+ .task-list .item4{
+     background: #1f1f1f;
+     color: #555555;
+ }
+ .task-list .item5{
+    background: #9d6bce;
+    color: black;
+}
+.task-list .item6{
+    background: #bcef4b;
+    color: black;
+}
+
+.task-list li h3{
+     flex: 1;
+     align-items: center;
+     display: flex;
+     align-items: center;
+     overflow: scroll;
+     margin-left: 1rem;
+     white-space: nowrap; /* Prevents text from wrapping */
+     text-overflow: ellipsis
+}
+        
+input[type="checkbox"] {
+            display: none;
+ }
+
+        
+ .checkbox-label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .checkbox-box {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #333;
+            border-radius: 4px;
+            display: inline-block;
+            position: relative;
+            margin-right: 8px;
+        }
+
+        input[type="checkbox"]:checked + .checkbox-box::after {
+            content: "✔";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 14px;
+            color: white;
+            background: #007bff; 
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+        }
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+
+    .del-btn{
+        background: none;
+        border: 2px solid #333;
+        fill: #333;
+        border-radius: 4px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+    .del-btn:hover{
+        border: 2px solid red;
+        fill: red;
+    }
+
